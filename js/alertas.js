@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Faz a requisição ajax para o monitoramento e faz o parsing do JSON para a notificação.
 function loadAlerts() {
   // Script responsável por realizar a verificação das mensagens e retorná-las em JSON.
-  var url = "http://www0015.centralserver.com.br/monitor/monitoramento.php";
+  // TROCAR PELA URL DO SISTEMA.
+  var url = "http://<DOMINIO>/monitor/monitoramento.php";
   var title = "";
   var msg = "";
 
