@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "InterNotify",
+  "version": "1.1",
+
+  "author": "https://github.com/rafaelsilverioit",
+
+  "description": "Notifica o usuário sobre novas mensagens no Intercom. São feitas conexões ao endereço do serviço: *.<dominio>.com/<caminho>",
+
+  "background": {
+    "page": "alertas/monitor.html",
+    "persistent": true
+  },
+
+  "icons": {
+    "48": "img/intercom.jpg"
+  },
+
+  "browser_action": {
+    "default_icon": "img/intercom.png",
+    "default_popup": "alertas/monitor.html"
+  },
+
+  "content_scripts": [{
+    "js": ["js/jquery.js", "js/alertas.js"],
+    "matches": ["http://*/*", "https://*/*"]
+  }],
+
+  "permissions": [
+    "notifications",
+    "*://*/*"
+  ]
+}
